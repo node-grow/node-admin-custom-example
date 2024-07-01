@@ -27,6 +27,14 @@ export default defineConfig({
             name: 'TestComponent',
             fileName: 'test-component',
             formats: ['umd']
-        }
+        },
+        rollupOptions: {
+            external: ['vue'],
+            output: {
+                globals: {
+                    vue: 'Vue',
+                }
+            }
+        },
     },
 });
